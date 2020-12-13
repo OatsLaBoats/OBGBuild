@@ -1,0 +1,10 @@
+COMPILER:clang-cl
+C_VERSION:c17
+
+FILE:main.c
+CONSTANT:DEF_ONE=1
+INCLUDE:C:\Dev\libs\Include
+LIBRARY:user32
+BUILD:release
+TYPE:shared
+OUTPUT:main

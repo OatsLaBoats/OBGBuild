@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="OBGBuild:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/OBGBuild_jar</output-path>
+    <root id="archive" name="OBGBuild.jar">
+      <element id="module-output" name="OBGBuild" />
+    </root>
+  </artifact>
+</component>

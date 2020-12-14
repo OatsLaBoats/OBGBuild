@@ -20,17 +20,24 @@ public class Builder
         String params = constructCompilerParams();
         System.out.println("params: " + params + "\n");
 
+        long start = System.nanoTime();
         compilationMessage(compile(params));
+        long end = System.nanoTime();
+
+        double seconds = (double)(end - start) / 1000000000.0;
+        System.out.format("Time to compile: %.2f seconds%n", seconds);
     }
 
     private void compilationMessage(int result)
     {
         if(result == 0)
         {
+            System.out.println();
             System.out.println("Compilation succeeded.");
         }
         else
         {
+            System.out.println();
             System.out.println("Compilation failed.");
             System.exit(1);
         }

@@ -289,7 +289,7 @@ public class Parser
             return;
         }
 
-        if(param.contains("."))
+        if(param.endsWith(".exe"))
         {
             commandError("OUTPUT", "output name should not have a file extension", "output_name");
             return;

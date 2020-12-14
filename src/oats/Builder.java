@@ -257,10 +257,10 @@ public class Builder
                     getIncludePaths() +
                     getSourceFiles() +
                     getSourceDirectories() +
-                    " /o " + buildInfo.outputName +
                     " /link /INCREMENTAL:NO /OPT:REF" +
                     " " + buildInfo.linkedFlags +
-                    getLibraries();
+                    getLibraries() +
+                    " /OUT:" + buildInfo.outputName;
         }
         else if(buildInfo.binaryType == BinaryType.SHARED_LIB)
         {
@@ -270,11 +270,11 @@ public class Builder
                     getIncludePaths() +
                     getSourceFiles() +
                     getSourceDirectories() +
-                    " /o " + buildInfo.outputName +
                     " /link /INCREMENTAL:NO /OPT:REF" +
                     " " + buildInfo.linkedFlags +
                     getLibraries() +
-                    " /DLL";
+                    " /DLL" +
+                    " /OUT:" + buildInfo.outputName;;
         }
         else
         {

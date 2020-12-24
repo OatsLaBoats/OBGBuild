@@ -175,16 +175,11 @@ public class Builder
 
         if(buildInfo.buildType == BuildType.RELEASE)
         {
-            compilerFlags = compilerFlags + " /O2 /Oi /fp:fast /MT";
+            compilerFlags = compilerFlags + " /O2 /Oi /fp:fast";
         }
         else if(buildInfo.buildType == BuildType.DEBUG)
         {
             compilerFlags = compilerFlags + " /Od /Zi";
-
-            if(!buildInfo.compilerFlags.contains("fsanitize"))
-            {
-                compilerFlags = compilerFlags + " /MTd";
-            }
         }
         else
         {
@@ -238,11 +233,11 @@ public class Builder
 
         if(buildInfo.buildType == BuildType.RELEASE)
         {
-            compilerFlags = compilerFlags + " /O2 /Oi /fp:fast /MT";
+            compilerFlags = compilerFlags + " /O2 /Oi /fp:fast";
         }
         else if(buildInfo.buildType == BuildType.DEBUG)
         {
-            compilerFlags = compilerFlags + " /Od /Zi /MTd";
+            compilerFlags = compilerFlags + " /Od /Zi";
         }
         else
         {
